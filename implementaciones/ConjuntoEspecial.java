@@ -1,16 +1,26 @@
+/* ESTRATEGIA:
+   Se usa un arreglo para guardar los datos.
+   Se usa una variable entera para indicar la cantidad de posiciones usadas del arreglo.
+   Para agregar se recorre primero el arreglo. Si no se lo encuentra se lo agrega en la utlima posicion. 
+   Para sacar se recorre el arreglo en busca del valor. Si existe, se lo saca sobreescribiendolo con el valor presente en la ultima posicion del arreglo.
+   Para elegir, si no esta vacio el arreglo, se elige un numero random en el rango de elementos disponibles del arreglo.
+   Para determinar si un valor pertenece, se lo busca recorriendo todo el arreglo.
+   Para los metodos que devuelven un objeto Respuesta, este se crea en cada metodo y se modifica de acuerdo a las condiciones preestablecidas en el TDA.
+*/
+
 public class ConjuntoEspecial implements ConjuntoEspecialTDA {
 
     private int indice;
     private int[] arr;
 
     @Override
-    public void inicializarConjunto() {
+    public void inicializarConjunto() { // Complejidad constante
         indice = 0;
         arr = new int[100];
     }
 
     @Override
-    public Respuesta agregar(int valor) {
+    public Respuesta agregar(int valor) { // Complejidad lineal
         Respuesta respuesta = new Respuesta();
         // Asumimos que el valor pertence y no lo agregamos
         respuesta.error = true;
@@ -24,7 +34,7 @@ public class ConjuntoEspecial implements ConjuntoEspecialTDA {
     }
 
     @Override
-    public Respuesta sacar(int valor) {
+    public Respuesta sacar(int valor) { // Complejidad lineal
         Respuesta respuesta = new Respuesta();
         // Asumimos que el valor no esta y no lo podemos sacar
         respuesta.error = true;
@@ -41,7 +51,7 @@ public class ConjuntoEspecial implements ConjuntoEspecialTDA {
     }
 
     @Override
-    public Respuesta elegir() {
+    public Respuesta elegir() { // Complejidad constante
         Respuesta respuesta = new Respuesta();
         // Asumimos que no tiene valores y no podemos elegir
         respuesta.error = true;
@@ -56,7 +66,7 @@ public class ConjuntoEspecial implements ConjuntoEspecialTDA {
     }
 
     @Override
-    public boolean pertenece(int valor) {
+    public boolean pertenece(int valor) { // Complejidad constante
         int i = 0;
         while (i < indice && arr[i] != valor)
             i++;
@@ -64,7 +74,7 @@ public class ConjuntoEspecial implements ConjuntoEspecialTDA {
     }
 
     @Override
-    public boolean conjuntoVacio() {
+    public boolean conjuntoVacio() { // Complejidad constante
         return indice == 0;
     }
 
