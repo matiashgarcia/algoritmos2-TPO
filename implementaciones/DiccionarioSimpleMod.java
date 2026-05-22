@@ -1,3 +1,6 @@
+import imple.Conjunto;
+import tda.ConjuntoTDA;
+
 /* ESTRATEGIA:
    Se usa un arreglo de objetos Elemento para guardar los pares clave-valor junto con su factor de modificacion.
    Se usa una variable entera para indicar la cantidad de posiciones usadas del arreglo.
@@ -7,9 +10,6 @@
    Para recuperar el valor o el factor de modificacion se recorre el arreglo hasta encontrar la clave, que se supone existente.
    Para obtener las claves se recorre el arreglo y se agregan todas las claves a un conjunto.
 */
-
-import imple.Conjunto;
-import tda.ConjuntoTDA;
 
 public class DiccionarioSimpleMod implements DiccionarioSimpleModTDA{
 

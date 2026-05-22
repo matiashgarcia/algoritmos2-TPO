@@ -1,3 +1,6 @@
+import imple.Pila;
+import tda.PilaTDA;
+
 /* ESTRATEGIA:
    Se usa una estructura enlazada mediante nodos para representar la multipila.
    Cada nodo guarda un valor entero y una referencia al siguiente nodo.
@@ -11,9 +14,6 @@
    La pila recibida se restaura usando una pila auxiliar.
    Para obtener el tope, se recorren como maximo la cantidad de nodos indicada y se usa una pila auxiliar para devolverlos preservando el orden.
 */
-
-import imple.Pila;
-import tda.PilaTDA;
 
 public class MultiPila implements MultiPilaTDA{
 

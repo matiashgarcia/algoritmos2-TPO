@@ -1,4 +1,6 @@
 package metodos_externos;
+import imple.Pila;
+import tda.PilaTDA;
 
 /* ESTRATEGIA:
    Se recorre la pila recibida para contar la cantidad total de elementos y la cantidad de elementos pares.
@@ -8,11 +10,8 @@ package metodos_externos;
    Finalmente se calcula el porcentaje haciendo cantidad de pares sobre cantidad total, multiplicado por 100.
 */
 
-import imple.Pila;
-import tda.PilaTDA;
-
 public class PorcentajeElementosPares {
-    
+
     public float porcentajeElementosPares(PilaTDA pila){ // COMPLEJIDAD LINEAL
         float cantTotal = 0;
         float cantPares = 0;

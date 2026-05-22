@@ -1,4 +1,8 @@
 package metodos_externos;
+import imple.Conjunto;
+import imple.Pila;
+import tda.ConjuntoTDA;
+import tda.PilaTDA;
 
 /* ESTRATEGIA:
    Se recorre la pila recibida para detectar que elementos aparecen mas de una vez.
@@ -8,11 +12,6 @@ package metodos_externos;
    Como para recorrer la pila es necesario desapilarla, cada valor se guarda tambien en una pila auxiliar.
    Al finalizar el recorrido, se reconstruye la pila original desapilando la auxiliar y apilando nuevamente en la pila recibida.
 */
-
-import imple.Conjunto;
-import imple.Pila;
-import tda.ConjuntoTDA;
-import tda.PilaTDA;
 
 public class ElementosRepetidosEnPila {
     
