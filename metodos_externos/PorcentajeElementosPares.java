@@ -12,8 +12,8 @@ import imple.Pila;
 import tda.PilaTDA;
 
 public class PorcentajeElementosPares {
-
-    public float porcentajeElementosPares(PilaTDA pila){ // Complejidad lineal
+    
+    public float porcentajeElementosPares(PilaTDA pila){ // COMPLEJIDAD LINEAL
         float cantTotal = 0;
         float cantPares = 0;
         PilaTDA aux = new Pila();

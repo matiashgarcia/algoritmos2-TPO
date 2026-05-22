@@ -30,16 +30,16 @@ public class MultiPila implements MultiPilaTDA{
     }
 
     @Override
-    public void apilar(PilaTDA valores) { // Complejidad polinomica
+    public void apilar(PilaTDA valores) { // Complejidad lineal
         PilaTDA inversa = new Pila();
         inversa.inicializarPila();
         // Se invierte el orden para que luego al agregar quede ordenada
-        while(!valores.pilaVacia()){ // Complejidad lineal
+        while(!valores.pilaVacia()){ 
             inversa.apilar(valores.tope()); 
             valores.desapilar();           
         }
         // Agrego la pila en orden
-        while(!inversa.pilaVacia()){ // Complejidad lineal
+        while(!inversa.pilaVacia()){ 
             Nodo nuevo = new Nodo();
             nuevo.sig = tope;
             nuevo.valor = inversa.tope();
@@ -50,7 +50,7 @@ public class MultiPila implements MultiPilaTDA{
     }
 
     @Override
-    public void desapilar(PilaTDA valores) { // Complejidad polinomica
+    public void desapilar(PilaTDA valores) { // Complejidad lineal
         PilaTDA inversa = new Pila();
         inversa.inicializarPila();
         Nodo aux = tope;
@@ -65,19 +65,19 @@ public class MultiPila implements MultiPilaTDA{
         // Si quedo vacia significa que todos los topes de ambas pilas coincidieron
         if(valores.pilaVacia()){
             // Procedo a desapilar
-            for(int j = 0; j<i; j++){ // Complejidad lineal
+            for(int j = 0; j<i; j++){ 
                 tope = tope.sig;
             }
         }
         // Me aseguro que queda la pila de valores intacta
-        while(!inversa.pilaVacia()){ // Complejidad lineal
+        while(!inversa.pilaVacia()){ 
             valores.apilar(inversa.tope());
             inversa.desapilar();
         }
     }
 
     @Override
-    public PilaTDA tope(int cantidad) { // Complejidad polinomica
+    public PilaTDA tope(int cantidad) { // Complejidad lineal
         PilaTDA topes = new Pila();
         topes.inicializarPila();
         PilaTDA inversa = new Pila();
@@ -85,12 +85,12 @@ public class MultiPila implements MultiPilaTDA{
         Nodo aux = tope;
         int i = 0;
         // La condicion por la que corta determina la cantidad de topes a devolver
-        while(aux != null && i < cantidad ){ // Complejidad lineal
+        while(aux != null && i < cantidad ){
             inversa.apilar(aux.valor);
             aux = aux.sig;
             i++;
         }
-        while(!inversa.pilaVacia()){ // Complejidad lineal
+        while(!inversa.pilaVacia()){ 
             topes.apilar(inversa.tope());
             inversa.desapilar();
         }
@@ -99,7 +99,7 @@ public class MultiPila implements MultiPilaTDA{
 
 
     @Override
-    public boolean pilaVacia() {
+    public boolean pilaVacia() { // Complejidad constante
         return tope == null;
     }
 

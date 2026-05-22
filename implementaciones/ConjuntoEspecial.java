@@ -66,7 +66,7 @@ public class ConjuntoEspecial implements ConjuntoEspecialTDA {
     }
 
     @Override
-    public boolean pertenece(int valor) { // Complejidad constante
+    public boolean pertenece(int valor) { // Complejidad lineal
         int i = 0;
         while (i < indice && arr[i] != valor)
             i++;

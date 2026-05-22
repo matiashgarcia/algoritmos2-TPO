@@ -90,7 +90,7 @@ public class DiccionarioSimpleMod implements DiccionarioSimpleModTDA{
         claves.inicializarConjunto();
         int i = 0;
         while(i < indice){
-            claves.agregar(elementos[i].clave); // Complejidad lineal
+            claves.agregar(elementos[i].clave); 
             i++;
         }
         return claves;
