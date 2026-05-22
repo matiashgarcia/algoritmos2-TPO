@@ -1,3 +1,17 @@
+/* ESTRATEGIA:
+   Se usa una estructura enlazada mediante nodos para representar la multipila.
+   Cada nodo guarda un valor entero y una referencia al siguiente nodo.
+   La variable tope apunta al primer nodo de la multipila.
+   Para apilar una pila recibida por parametro, primero se invierte en una pila auxiliar para poder agregar sus valores respetando el orden original.
+   Luego se insertan los valores al inicio de la estructura enlazada, actualizando el tope en cada insercion.
+   Durante este proceso se vuelve a reconstruir la pila recibida para que no quede modificada.
+   Para desapilar, se compara el tope de la multipila con los valores de la pila recibida.
+   Si todos los valores recibidos coinciden con los primeros valores de la multipila, se eliminan esos nodos.
+   Si no coinciden completamente, no se modifica la multipila.
+   La pila recibida se restaura usando una pila auxiliar.
+   Para obtener el tope, se recorren como maximo la cantidad de nodos indicada y se usa una pila auxiliar para devolverlos preservando el orden.
+*/
+
 import imple.Pila;
 import tda.PilaTDA;
 
