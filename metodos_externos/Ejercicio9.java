@@ -18,7 +18,7 @@ import tda.PilaTDA;
    Finalmente se restauran la pila y la cola originales usando sus estructuras auxiliares.
 */
 
-public class ElementosComunesEntrePilaYCola { 
+public class Ejercicio9 { 
 
     public ConjuntoTDA elementosComunesEntrePilaYCola(PilaTDA pila, ColaTDA cola){ // COMPLEJIDAD POLINOMICA
         ConjuntoTDA comunes = new Conjunto();

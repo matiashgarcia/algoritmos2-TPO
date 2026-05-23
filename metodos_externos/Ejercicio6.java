@@ -1,4 +1,5 @@
 package metodos_externos;
+
 import imple.Pila;
 import tda.PilaTDA;
 
@@ -10,30 +11,30 @@ import tda.PilaTDA;
    Finalmente se calcula el porcentaje haciendo cantidad de pares sobre cantidad total, multiplicado por 100.
 */
 
-public class PorcentajeElementosPares {
+public class Ejercicio6 {
 
-    public float porcentajeElementosPares(PilaTDA pila){ // COMPLEJIDAD LINEAL
+    public float porcentajeElementosPares(PilaTDA pila) { // COMPLEJIDAD LINEAL
         float cantTotal = 0;
         float cantPares = 0;
         PilaTDA aux = new Pila();
         aux.inicializarPila();
         // Recorro la pila
-        while(!pila.pilaVacia()){
-            if(pila.tope() % 2 == 0)
+        while (!pila.pilaVacia()) {
+            if (pila.tope() % 2 == 0)
                 cantPares++;
             cantTotal++;
             aux.apilar(pila.tope());
             pila.desapilar();
         }
         // Vuelvo a llenar la pila original
-        while(!aux.pilaVacia()){
+        while (!aux.pilaVacia()) {
             pila.apilar(aux.tope());
             aux.desapilar();
         }
-        if(cantTotal == 0){
+        if (cantTotal == 0) {
             return 0;
         }
-        return (cantPares / cantTotal) * 100;        
+        return (cantPares / cantTotal) * 100;
     }
-    
+
 }

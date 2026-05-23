@@ -15,7 +15,7 @@ import tda.ConjuntoTDA;
    La cola resultado conserva el orden de la primera aparicion de cada elemento.
 */
 
-public class EliminarRepetidosEnCola {
+public class Ejercicio8 {
 
     public ColaTDA eliminarRepetidosEnCola(ColaTDA cola) { // COMPLEJIDAD POLINOMICA
         ColaTDA aux = new Cola();

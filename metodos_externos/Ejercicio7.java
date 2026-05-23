@@ -13,7 +13,7 @@ import tda.PilaTDA;
    Al finalizar el recorrido, se reconstruye la pila original desapilando la auxiliar y apilando nuevamente en la pila recibida.
 */
 
-public class ElementosRepetidosEnPila {
+public class Ejercicio7 {
     
     public ConjuntoTDA elementosRepetidosEnPila(PilaTDA pila){ // COMPLEJIDAD POLINOMICA
         ConjuntoTDA vistos = new Conjunto();
