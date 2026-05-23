@@ -1,3 +1,9 @@
+import imple.ColaPrioridad;
+import imple.Conjunto;
+import tda.ColaPrioridadTDA;
+import tda.ConjuntoTDA;
+import tda.DiccionarioSimpleTDA;
+
 /* ESTRATEGIA:
    Se usa una ColaPrioridadTDA para guardar los pares clave-valor.
    La clave se guarda como el valor acolado y el valor asociado se guarda como prioridad.
@@ -8,13 +14,6 @@
    Para recuperar se busca la clave pasando temporalmente elementos a una cola auxiliar, se toma el valor asociado a la prioridad y luego se restaura la cola.
    Para obtener las claves se recorren todos los elementos de la cola, se agregan las claves a un conjunto y se reconstruye la cola original con una auxiliar.
 */
-
-import imple.ColaPrioridad;
-import imple.Conjunto;
-import tda.ColaPrioridadTDA;
-import tda.ConjuntoTDA;
-import tda.DiccionarioSimpleTDA;
-
 public class DiccionarioSimpleConColaPrioridad implements DiccionarioSimpleTDA {
 
     ColaPrioridadTDA cola;
